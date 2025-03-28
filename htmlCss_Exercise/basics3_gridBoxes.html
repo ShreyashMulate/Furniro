@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .grid-container{
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: 1fr 2fr 2fr 1fr;
+            gap: 5px;
+            grid-template-areas: 
+            "item1      .       .       .       .     item2"
+            ".      .      item5       item5        .       ."
+            ".      .      item5       item5        .       ."
+            "item3      .       .       .       .       item4"
+            ;
+            height: 100vh;
+        }
+        .item{
+            background-color: chocolate;
+            border-radius: 15px;
+        }
+        .item1{
+            grid-area: item1;
+        }
+        .item2{
+            grid-area: item2;
+        }
+        .item3{
+            grid-area: item3;
+        }
+        .item4{
+            grid-area: item4;
+        }
+        .item5{
+            grid-area: item5;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            grid-template-areas: 
+            "boxes1      .       .       .       .       boxes2"
+            ".      .       .       .       .       ."
+            ".      .       boxes5       boxes5       .       ."
+            ".      .       boxes5       boxes5       .      ."
+            ".      .       .       .       .       ."
+            "boxes3      .       .       .       .       boxes4"
+            ;
+        }
+        .boxes{
+            background-color: crimson;
+            border-radius: 10px;
+        }
+        .boxes1{
+            grid-area: boxes1;
+        }
+        .boxes2{
+            grid-area: boxes2;
+        }
+        .boxes3{
+            grid-area: boxes3;
+        }
+        .boxes4{
+            grid-area: boxes4;
+        }
+        .boxes5{
+            grid-area: boxes5;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item item1">Item - 1</div>
+        <div class="item item2">Item - 2</div>
+        <div class="item item3">Item - 3</div>
+        <div class="item item4">Item - 4</div>
+        <div class="item item5">
+            <div class="boxes boxes1"></div>
+            <div class="boxes boxes2"></div>
+            <div class="boxes boxes3"></div>
+            <div class="boxes boxes4"></div>
+            <div class="boxes boxes5"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .flexBox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .flexBox1 {
+            height: 700px;
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: ivory;
+            border-radius: 20px;
+        }
+
+        .flexBox2 {
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            background-color: crimson;
+            border-radius: 15px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .sbox {
+            width: 50px;
+            height: 50px;
+            background-color: crimson;
+            border-radius: 10px;
+        }
+
+        .cont1 {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>FlexBox -> </h2>
+    <div class="flexBox">
+        <div class="flexBox1">
+            <div class="cont1 row1">
+                <div class="sbox box1"></div>
+                <div class="sbox"></div>
+            </div>
+            <div class="flexBox2">Box2</div>
+            <div class="cont1 row2">
+                <div class="sbox"></div>
+                <div class="sbox"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

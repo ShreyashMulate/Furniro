@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layouts - 3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: beige;
+            border-radius: 10px;
+        }
+
+        .sbox {
+            width: 1.5em;
+            height: 1.5em;
+            background-color: crimson;
+            border-radius: 10px;
+        }
+
+        .cont {
+            display: flex;
+            justify-content: space-between;
+        }
+        .box1{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .cont1{
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="cont">
+            <div class="box box1">
+                <div class="cont1 row1">
+                    <div class="sbox box1"></div>
+                    <div class="sbox"></div>
+                </div>
+                <div class="cont1 row2">
+                    <div class="sbox"></div>
+                    <div class="sbox"></div>
+                </div>
+            </div>
+            <div class="box">box - 2</div>
+        </div>
+        <div class="cont">
+            <div class="box">box - 3</div>
+            <div class="box">box - 4</div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Fundamentals</title>
+    <style>
+        .para{
+            color: red;
+        }
+        #unique{
+            color: green;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+        table, th, td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td{
+            padding: 5px;
+            margin: 5px;
+        }
+        .center{
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <p id="unique" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, quisquam. Ea numquam accusamus velit sint nulla quis ipsum mollitia nihil quas officia fugiat quaerat dolore eaque amet soluta quod autem corrupti, deleniti vero at laudantium. Doloribus natus nihil minima voluptatum delectus eveniet? Quos, similique deleniti tempora dolor nobis tempore eius.</p>
+    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, quisquam. Ea numquam accusamus velit sint nulla quis ipsum mollitia nihil quas officia fugiat quaerat dolore eaque amet soluta quod autem corrupti, deleniti vero at laudantium. Doloribus natus nihil minima voluptatum delectus eveniet? Quos, similique deleniti tempora dolor nobis tempore eius.</p>
+    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, quisquam. Ea numquam accusamus velit sint nulla quis ipsum mollitia nihil quas officia fugiat quaerat dolore eaque amet soluta quod autem corrupti, deleniti vero at laudantium. Doloribus natus nihil minima voluptatum delectus eveniet? Quos, similique deleniti tempora dolor nobis tempore eius.</p>
+    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, quisquam. Ea numquam accusamus velit sint nulla quis ipsum mollitia nihil quas officia fugiat quaerat dolore eaque amet soluta quod autem corrupti, deleniti vero at laudantium. Doloribus natus nihil minima voluptatum delectus eveniet? Quos, similique deleniti tempora dolor nobis tempore eius.</p>
+    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, quisquam. Ea numquam accusamus velit sint nulla quis ipsum mollitia nihil quas officia fugiat quaerat dolore eaque amet soluta quod autem corrupti, deleniti vero at laudantium. Doloribus natus nihil minima voluptatum delectus eveniet? Quos, similique deleniti tempora dolor nobis tempore eius.</p>
+
+    <table style="border: 2px solid black">
+        <thead>
+            <tr>
+                <th rowspan="2" scope="row">Name</th>
+                <th rowspan="2" scope="col">Lifespan</th>
+                <th colspan="3" scope="col">Classification</th>
+            </tr>
+            <tr>
+                <th>Mammal</th>
+                <th>Reptile</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Elephant</td>
+                <td>60-70 years</td>
+                <td class="center">✔️</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Tiger</td>
+                <td>10-15 years</td>
+                <td class="center">✔️</td>
+            </tr>
+            <tr>
+                <td>Tortoise</td>
+                <td>80-150</td>
+                <td></td>
+                <td class="center">✔️</td>
+            </tr>
+        </tbody>
+        <caption>Types of Animal</caption>
+    </table>
+</body>
+</html>

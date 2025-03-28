@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layouts</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box1{
+            width: 500px;
+            height: 700px;
+            float: left;
+            background-color: aquamarine;
+            margin:30px 32%;
+            border-radius: 15px;
+            text-align: center;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: beige;
+            /* float: right; */
+            /* margin-top: 50%; */
+            /* margin-right: 42%; */
+            position: absolute;
+            top: 50%;
+            left: 46.5%;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"> Float example Box - 1
+        <div class="box2"> Box -2 </div>
+    </div>
+</body>
+</html>

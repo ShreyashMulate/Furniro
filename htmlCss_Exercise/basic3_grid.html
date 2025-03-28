@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-areas: 
+            ".      .       badaBox          .        ."
+            ".      .       badaBox          .        ."
+            ".      .       badaBox          .        ."
+            ;
+        }
+        .badaBox{
+            display: grid;
+            grid-area: badaBox;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(7, 1fr);
+            height: 700px;
+            width: 500px;
+            background-color: lightsalmon;
+            border-radius: 15px;
+            grid-template-areas: 
+            ".      .       .       .       ."
+            ".      .       .       .       ."
+            ".      .       .       .       ."
+            ".      .       chotaBox       .       ."
+            ".      .       .       .       ."
+            ".      .       .       .       ."
+            ".      .       .       .       ."
+            ;
+        }
+        .chotaBox{
+            grid-area: chotaBox;
+            height: 100px;
+            width: 100px;
+            background-color:cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="badaBox">
+            <div class="chotaBox">
+    
+            </div>
+        </div>
+    </div>
+</body>
+</html>
