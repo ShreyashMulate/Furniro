@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+html::-webkit-scrollbar{
+    display: none;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px repeat(auto-fit, minmax(100px, auto));
+    /* grid-template-rows: auto; */
+    min-height: 100vh; 
+}
+
+/* NAVBAR */
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 100;
+}
+.navbar .brandName{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar .brandName h2{
+    font-family: Monteserrat;
+}
+.navbar .navigation{
+    width: 40%;
+}
+.navbar .navigation ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+}
+.navbar .navigation ul li a{
+    text-decoration :none;
+    color: black;
+    font-family: "Poppins",sans-serif;
+}
+.navbar .navigation ul li a{
+    transition: 5s;
+}
+.navbar .navigation ul li:hover a{
+    border-bottom: 5px solid black;
+}
+.navbar .icons{
+    width: 20%;
+}
+.navbar .icons ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.navbar .icons ul li{
+    list-style: none;
+}
+
+/* ABOUT */
+.about{
+    background: url("../Project_Images/scandinavian-interior-mockup-wall-decal-background\ 1.png") no-repeat center center/cover;
+    min-height: 650px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    position: relative;
+}
+.about .aboutContent{
+    position: absolute;
+    left: 51%;
+    height: 60%;
+    width: 45%;
+    border-radius: 10px;
+    background-color: #FFF3E3;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.aboutContent > *{
+    padding-left: 5%;
+}
+.aboutContent h6{
+    margin-top: 1em;
+    font-size: 1em;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+.aboutContent h1{
+    font-size: 2.7em;
+    color: #B88E2F;
+    line-height: 1.3em;
+}
+.aboutContent .buy{
+    height: 13%;
+    width: 30%;
+    position: relative;
+    left: 5%;
+    padding: 0;
+    border: none;
+    margin-top: 2em;
+    background-color: #B88E2F;
+    color: white;
+    font-size:medium;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+/* CATEGORIES */
+.categories{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.categories .heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2em;
+}
+.categories .heading h2{
+    font-size: 2em;
+}
+.categories .categoryBox{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2.5em;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.categories .categoryBox .box{
+    display: flex;
+    margin-top: 2em;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 25%;
+    transition: 0.8s;
+}
+.categories .categoryBox .box:hover{
+    transform: scale(1.1);
+    box-shadow:  6px 7px 6px rgba(0, 0, 0, 0.3);
+}
+.categories .categoryBox .box img{
+    max-width: 100%;
+    height: auto;
+}
+.categories .categoryBox .box p{
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+/* PRODUCTS */
+.products{
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.products .heading{
+    text-align: center;
+    margin-top: 4em;
+}
+.products .heading h2{
+    font-size: 2em;
+}
+.products .cards{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 3%;
+    min-height: 400px;
+    row-gap: 2.5em;
+}
+.products .cards .card{
+    background-color: #F4F5F7;
+    border-radius: 10px;
+    transition: 0.8s;
+    overflow: hidden;
+    position: relative;
+    transition-delay: 2s;
+}
+.products .cards .card:hover .cardContent{
+    background-color:rgba(0, 0, 0, 0.3);
+    box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+}
+.products .cards .card .cardContent{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    bottom: -250px;
+    transition: all 0.5s ease-in-out;
+    z-index: 10;
+}
+.products .cards .card .cardContent .actions{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+.products .cards .card .cardContent button{
+    width: 60%;
+    height: 9%;
+    margin-bottom: 2em;
+    border: none;
+    background-color: white;
+    color: #B88E2F;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+.products .cards .cardContent button:hover{
+    background-color: #B88E2F;
+    color: white;
+}
+.products .cards .card .cardContent .actions p{
+    padding: 0;
+    color: white;
+}
+.products .cards .card img{
+    height: 100%;
+    width: auto;
+    border-radius: 5px;
+}
+.products .cards .card .description h3,p{
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+.products .cards .card .description p{
+    font-size: 0.9em;
+    color: grey;
+}
+del{
+    color: grey;
+    padding-left: 3em;
+    font-size: 0.9rem;
+}
+.products .cards .card .description .prPrice{
+    font-size: 1em;
+    font-weight: 600;
+    color: black;
+}
+.products .showBtn{
+    width: 15em;
+    margin-top: 3em;
+    padding: 1em;
+    border: 2px solid #B88E2F;
+    background-color: white;
+    font-size: 1em;
+    font-weight: bold;
+    color: #B88E2F;
+    transition: 1s;
+    cursor: pointer;
+}
+.products .showBtn:hover{
+    background-color: #B88E2F;
+    border: none;
+    color: white;
+}
+
+/* FOOTER */
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
+    margin-top: 3em;
+    border-top: 2px solid rgba(158, 157, 157,0.3);
+}
+footer .footerContent{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+footer .footerContent .address h3{
+    margin-left: 0.4em;
+    margin-bottom: 1em;
+    font-size: 2em;
+}
+footer .address{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    align-self: baseline;
+    text-align: justify;
+    width: 30%;
+}
+footer .address p{
+    color: grey;
+}
+footer .contentList{
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    gap: 1em;
+}
+footer .contentList .heading{
+    color: grey;
+    font-size: 1.2em;
+}
+footer .contentList .col{
+    display: flex;
+    width: 20%;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 2em;
+}
+footer .contentList .col p{
+    padding: 0px;
+}
+footer .contentList .col ul li{
+    margin-bottom: 2em;
+}
+footer .contentList ul li{
+    list-style: none;
+}
+footer .contentList .newsLetter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .contentList .newsLetter button{
+    border: none;
+    background: white;
+    font-weight: 600;
+    border-bottom: 1px solid black;
+    letter-spacing: 2px;
+    gap: 2em;
+    cursor: pointer;
+}
+footer .contentList .newsLetter input{
+    border: none;
+    border-bottom: 1px solid black;
+    margin-right: 1em;
+}
+footer .contentList .newsLetter input::placeholder{
+    font-size: 13px;
+}
+footer .finalText{
+    border-top: 1px solid grey;
+    width: 80%;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1200px){
+    .products .cards .card{
+        margin-right: 15px;
+    }
+    footer .contentList .newsLetter{
+        flex-direction: column;
+        align-items: start;
+        row-gap: 1em;
+    }
+}
+
+@media screen and (max-width: 991px){
+    .categories .categoryBox .box{
+        max-width: 15%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .categories .categoryBox .box{
+        max-width: 20%;
+    }
+}
