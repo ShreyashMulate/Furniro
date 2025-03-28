@@ -5,6 +5,9 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+html{
+    scroll-behavior: smooth;
+}
 html::-webkit-scrollbar{
     display: none;
 }
@@ -25,6 +28,8 @@ html::-webkit-scrollbar{
     top: 0;
     background-color: white;
     z-index: 100;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+    /* border: 2px solid red; */
 }
 .navbar .brandName{
     display: flex;
@@ -124,6 +129,7 @@ html::-webkit-scrollbar{
     flex-direction: column;
 }
 .categories .heading{
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -144,6 +150,7 @@ html::-webkit-scrollbar{
 .categories .categoryBox .box{
     display: flex;
     margin-top: 2em;
+    margin-right: 0.8em;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -160,7 +167,8 @@ html::-webkit-scrollbar{
 }
 .categories .categoryBox .box p{
     font-weight: 500;
-    font-size: 1.2em;
+    font-size: 1.8em;
+    padding-left: none;
 }
 
 /* PRODUCTS */
@@ -186,6 +194,8 @@ html::-webkit-scrollbar{
     margin-top: 3%;
     min-height: 400px;
     row-gap: 2.5em;
+    column-gap: 0.8em;
+    width: 90%;
 }
 .products .cards .card{
     background-color: #F4F5F7;
@@ -219,7 +229,18 @@ html::-webkit-scrollbar{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    gap: 1em;
     width: 100%;
+}
+.products .cards .card .actionContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+}
+.products .cards .card .actionContent img{
+    width: 30%;
+    padding-right: 4px;
 }
 .products .cards .card .cardContent button{
     width: 60%;
@@ -281,6 +302,48 @@ del{
     color: white;
 }
 
+/* BENTOGRID */
+.bentoMain{
+    display: flex;
+    margin-top: 4em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.bentoMain .bentoHeading{
+    text-align: center;
+}
+.bentoGrid{
+    margin-top: 2em;
+    align-items: center;
+    overflow: auto;
+}
+.bentoGrid .container1{
+    display: flex;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.bentoGrid .container1 .box1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+.bentoGrid .container1 .box1:nth-child(1){
+    width: 5%;
+}
+.bentoGrid .container2{
+    grid-area: col2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bentoGrid .container3{
+    grid-area: col3;
+}
+
 /* FOOTER */
 footer{
     display: flex;
@@ -319,6 +382,7 @@ footer .contentList{
     display: flex;
     justify-content: space-evenly;
     align-items: baseline;
+    flex-wrap: wrap;
     gap: 1em;
 }
 footer .contentList .heading{
@@ -327,7 +391,7 @@ footer .contentList .heading{
 }
 footer .contentList .col{
     display: flex;
-    width: 20%;
+    width: 25%;
     justify-content: center;
     align-items: start;
     flex-direction: column;
@@ -360,6 +424,7 @@ footer .contentList .newsLetter input{
     border: none;
     border-bottom: 1px solid black;
     margin-right: 1em;
+    width: 13em;
 }
 footer .contentList .newsLetter input::placeholder{
     font-size: 13px;
@@ -371,9 +436,6 @@ footer .finalText{
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 1200px){
-    .products .cards .card{
-        margin-right: 15px;
-    }
     footer .contentList .newsLetter{
         flex-direction: column;
         align-items: start;
@@ -383,12 +445,142 @@ footer .finalText{
 
 @media screen and (max-width: 991px){
     .categories .categoryBox .box{
-        max-width: 15%;
+        min-width: 15%;
+    }
+    footer .address{
+        width: 20%;
+    }
+    .categories .categoryBox .box p{
+        font-size: 1.8em;
+        padding-top: 1em;
     }
 }
 
 @media screen and (max-width: 768px){
+    .navbar .navigation{
+        width: 50%;
+    }
+    .navbar .icons {
+        display: none;
+    }
+    .about .aboutContent {
+        height: 50%;
+        left: 40%;
+        width: 55%;
+    }
+    .about .aboutContent h1{
+        font-size: 2em;
+    }
+    .about .aboutContent p{
+        font-size: 0.85em;
+    }
+    .about .aboutContent .buy{
+        margin-top: 1em;
+        font-size: 0.8em;
+    }
+    footer .footerContent .contentList .newsLetter input{
+        margin-right: 0;
+        width: 10em;
+    }
+    footer .footerContent .contentList .newsLetter input::placeholder{
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .navbar .navigation{
+        display: none;
+    }
+    .about .aboutContent{
+        height: 60%;
+        left: 17%;
+        width: 68%;
+    }
+    .categories .categoryBox {
+        margin-top: 0.8em;
+    }
     .categories .categoryBox .box{
-        max-width: 20%;
+        margin-right: 0;
+    }
+    .products .cards{
+        width: 100%;
+    }
+    .products .cards .card{
+        width: 70%;
+    }
+    .products .cards .card .description img{
+        width: 100%;
+    }
+    .products .cards .card .description h3, p{
+        padding-bottom: 12px;
+    }
+    .products .cards .card .description p{
+        font-size: 1.2em;
+    }
+    .products .cards .card .description .prPrice{
+        font-size: 1.15em;
+    }
+    .products .cards .card .description h3{
+        font-size: 1.8em;
+    }
+    .products .cards .card .cardContent{
+        bottom: -400px;
+    }
+    .products .cards .card .cardContent .actions {
+        width: 80%;
+    }
+    .products .cards .card .cardContent .actionContent{
+        width: 45%;
+    }
+    .products .cards .card .cardContent img{
+        width: 18%;
+        padding: 2px;
+    }
+    .products .cards .card .actions p{
+        width: 15%;
+    }
+    footer .footerContent{
+        flex-direction: column;
+    }
+    footer .footerContent .address{
+        justify-content: center;
+        width: 100%;
+    }
+    footer .footerContent .address{
+        align-items: center;
+    }
+    footer .footerContent .address h3{ 
+        margin-bottom: 10px;
+    }
+    footer .footerContent .contentList{
+        width: 90%;
+        column-gap: 3em;
+        row-gap: 0;
+    }
+    footer .footerContent .contentList .col{
+        margin-top: 2em;
+        align-items: center;
+        width: 33%;
+        text-align: center;
+    }
+    footer .footerContent .contentList .col .heading{
+        font-size: 1.5em;
+        white-space: nowrap;
+    }
+    footer .footerContent .contentList .newsLetter input{
+        width: 15em;
+    }
+    footer .footerContent .contentList .newsLetter input::placeholder{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 375px){
+    .about .aboutContent{
+        height: 55%;
+        left: 7%;
+        width: 86%;
+    }
+    .categories .heading p{
+        text-align: center;
     }
 }
