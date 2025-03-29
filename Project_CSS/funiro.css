@@ -156,6 +156,7 @@ html::-webkit-scrollbar{
     flex-direction: column;
     min-width: 25%;
     transition: 0.8s;
+    border-radius: 10px;
 }
 .categories .categoryBox .box:hover{
     transform: scale(1.1);
@@ -203,6 +204,7 @@ html::-webkit-scrollbar{
     transition: 0.8s;
     overflow: hidden;
     position: relative;
+    box-shadow: 4px 4px 6px 3px rgba(0, 0, 0, 0.3);
     transition-delay: 2s;
 }
 .products .cards .card:hover .cardContent{
@@ -237,6 +239,7 @@ html::-webkit-scrollbar{
     justify-content: center;
     align-items: center;
     width: 33%;
+    cursor: pointer;
 }
 .products .cards .card .actionContent img{
     width: 30%;
@@ -252,6 +255,7 @@ html::-webkit-scrollbar{
     font-weight: bold;
     letter-spacing: 1px;
     transition: 0.3s;
+    cursor: pointer;
 }
 .products .cards .cardContent button:hover{
     background-color: #B88E2F;
@@ -260,6 +264,13 @@ html::-webkit-scrollbar{
 .products .cards .card .cardContent .actions p{
     padding: 0;
     color: white;
+    transition: 0.3s;
+}
+.products .cards .card .cardContent .actionContent:hover p{
+    color: #B88E2F;
+}
+.products .cards .card .cardContent .actionContent:hover img{
+    transform: scale(1.2);
 }
 .products .cards .card img{
     height: 100%;
@@ -302,6 +313,94 @@ del{
     color: white;
 }
 
+/* ROOMS */
+.rooms{
+    margin-top: 2em;
+    min-height: 650px;
+    background-color: #FCF8F3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 1em;
+    overflow-x: auto;
+}
+.rooms .content{
+    width: 35%;
+    margin-left: 3em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.rooms .content h1{
+    font-size: 2.25em;
+}
+.rooms .content p{
+    padding: 0;
+    color: grey;
+}
+.rooms .content button{
+    margin-top: 1.5em;
+    height: 3em;
+    width: 12em;
+    border: none;
+    background-color: #B88E2F;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+.rooms .roomImg{
+    width: 70%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    overflow-x: auto;
+}
+.rooms .roomImg .imgDes{
+    position: relative;
+}
+.rooms .roomImg .imgDes .imgtxt{
+    height: 100px;
+    width: 203px;
+    position: absolute;
+    z-index: 1;
+    top: 72%;
+    left: 10%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,255,255,0.5);
+    backdrop-filter: blur(4px);
+}
+.rooms .roomImg .imgDes .txtIcon{
+    height: 40px;
+    width: 40px;
+    background-color: #B88E2F;
+    position: absolute;
+    z-index: 1;
+    top: 82.1%;
+    left: 60.2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rooms .roomImg .imgDes .imgtxt p:nth-child(2){
+    font-size: 25px;
+    font-weight: 500;
+}
+.rooms .roomImg .imgDes .imgtxt p{
+    padding: 0;
+}
+.rooms .roomImg img{
+    transform: scale(0.9);
+}
+.rooms .roomImg::-webkit-scrollbar{
+    display: none;
+}
+
 /* BENTOGRID */
 .bentoMain{
     display: flex;
@@ -309,39 +408,141 @@ del{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow-x: auto;
 }
 .bentoMain .bentoHeading{
     text-align: center;
 }
 .bentoGrid{
-    margin-top: 2em;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    overflow: auto;
+    column-gap: 0.8em;
+    overflow-x: auto;
+}
+.bentoGrid .container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 .bentoGrid .container1{
+    height: 100%;
+    min-width: 36%;
     display: flex;
-    width: 30%;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 1em;
+}
+.bentoGrid .container .box{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    column-gap: 1em;
 }
 .bentoGrid .container1 .box1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas: 
+    "left1 left1 . . . . . ."
+    "left1 left1 left2 left2 left2 left2 left2 left2"
+    "left1 left1 left2 left2 left2 left2 left2 left2"
+    ;
+    column-gap: 0.8em;
+    width: 100%;
+    height: 100%;
 }
-.bentoGrid .container1 .box1:nth-child(1){
-    width: 5%;
+.bentoGrid .container .box1 img:nth-child(1){
+    grid-area: left1;
+}
+.bentoGrid .container .box1 img:nth-child(2){
+    grid-area: left2;
+}
+.bentoGrid .container .box1 img{
+    align-self: flex-end;
+}
+.bentoGrid .container .box2 img{
+    align-self: flex-start;
+}
+.bentoGrid .container1 .box2{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas: 
+    "left3 left3 left3 left4 left4 left4 left4 left4"
+    "left3 left3 left3 left4 left4 left4 left4 left4"
+    "left3 left3 left3 . . . . . "
+    ;
+    column-gap: 0.8em;
+    width: 100%;
+    height: 100%;
+}
+.bentoGrid .container .box2 img:nth-child(1){
+    grid-area: left3;
+}
+.bentoGrid .container .box2 img:nth-child(2){
+    grid-area: left4;
 }
 .bentoGrid .container2{
-    grid-area: col2;
     display: flex;
+    min-width: 22%;
     justify-content: center;
     align-items: center;
 }
 .bentoGrid .container3{
-    grid-area: col3;
+    height: 100%;
+    min-width: 36%;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.bentoGrid .container3 .box1{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4,1fr);
+    grid-template-areas:
+    ". . . . right2 right2 right2 right2"
+    "right1 right1 right1 right1 right2 right2 right2 right2"
+    "right1 right1 right1 right1 right2 right2 right2 right2"
+    "right1 right1 right1 right1 right2 right2 right2 right2"
+    ;
+    column-gap: 0.8em;
+    width: 100%;
+    height: 60%;
+}
+.bentoGrid .container3 .box1 img:nth-child(1){
+    grid-area: right1;
+}
+.bentoGrid .container3 .box1 img:nth-child(2){
+    grid-area: right2;
+}
+.bentoGrid .container3 .box2{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8,1fr);
+    grid-template-areas:
+    "right3 right3 right3 right4 right4 right4 right4 ."
+    "right3 right3 right3 right4 right4 right4 right4 ."
+    "right3 right3 right3 right4 right4 right4 right4 ."
+    "right3 right3 right3 right4 right4 right4 right4 ."
+    "right3 right3 right3 right4 right4 right4 right4 ."
+    "right3 right3 right3 . . . . ."
+    "right3 right3 right3 . . . . ."
+    "right3 right3 right3 . . . . ."
+    ;
+    column-gap: 0.8em;
+    width: 100%;
+    height: 40%;
+}
+.bentoGrid .container3 .box2 img:nth-child(1){
+    grid-area: right3;
+}
+.bentoGrid .container3 .box2 img:nth-child(2){
+    grid-area: right4;
 }
 
 /* FOOTER */
@@ -361,7 +562,6 @@ footer .footerContent{
     width: 100%;
 }
 footer .footerContent .address h3{
-    margin-left: 0.4em;
     margin-bottom: 1em;
     font-size: 2em;
 }
@@ -378,7 +578,7 @@ footer .address p{
     color: grey;
 }
 footer .contentList{
-    width: 60%;
+    width: 55%;
     display: flex;
     justify-content: space-evenly;
     align-items: baseline;
@@ -538,6 +738,19 @@ footer .finalText{
     }
     .products .cards .card .actions p{
         width: 15%;
+    }
+    .rooms{
+        flex-direction: column;
+        width: 100%;
+    }
+    .rooms .content{
+        width: 100%;
+        margin-left: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    .rooms .content h1{
+        font-size: 2em;
     }
     footer .footerContent{
         flex-direction: column;
