@@ -9,17 +9,25 @@
 </head>
 
 <body>
+    <label class="hamburger-menu">
+        <input type="checkbox">
+    </label>
+    <!-- <label class="toggle">
+        <input type="checkbox">
+        <span class="slider"></span>
+    </label> -->
     <div class="grid">
         <div class="navbar">
             <div class="brandName">
-                <img src="Project_Images/Frame 168.png" alt="not found">
+                <img src="Project_Images/FurniroLogo.png" alt="not found">
+                <h1>Furniro</h1>
             </div>
             <div class="navigation">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
             <div class="icons">
@@ -31,7 +39,7 @@
                 </ul>
             </div>
         </div>
-        <div class="about">
+        <div class="about" id="home">
             <div class="aboutContent">
                 <h6>New Arrival</h6>
                 <h1>Disover Our New Collection</h1>
@@ -60,7 +68,7 @@
                 </div>
             </div>
         </div>
-        <div class="products">
+        <div class="products" id="shop">
             <div class="heading">
                 <h2>Our Products</h2>
             </div>
@@ -70,7 +78,8 @@
                         <img src="Project_Images/Slytherin.png" alt="not found">
                         <h3>Slytherin</h3>
                         <p>Stylish cafe chair</p>
-                        <p class="prPrice">Rp 2.500.000 <del>Rp 3.500.00</del></p>
+                        <p class="prPrice">Rp 2.500.000</p>
+                        <del>Rp 3.500.00</del>
                     </div>
                     <div class="cardContent">
                         <button>Add To Cart</button>
@@ -120,7 +129,8 @@
                         <img src="Project_Images/Lolito.png" alt="not found">
                         <h3>Lolito</h3>
                         <p>Luxury Big Sofa</p>
-                        <p class="prPrice">Rp 2.500.000 <del>Rp 3.500.00</del></p>
+                        <p class="prPrice">Rp 2.500.000</p>
+                        <del>Rp 3.500.00</del>
                     </div>
                     <div class="cardContent">
                         <button>Add To Cart</button>
@@ -145,7 +155,8 @@
                         <img src="Project_Images/Respira.png" alt="not found">
                         <h3>Respira</h3>
                         <p>Outdoor bar table and stool</p>
-                        <p class="prPrice">Rp 2.500.000 <del>Rp 14.500.00</del></p>
+                        <p class="prPrice">Rp 2.500.000</p>
+                        <del>Rp 14.500.00</del>
                     </div>
                     <div class="cardContent">
                         <button>Add To Cart</button>
@@ -220,7 +231,8 @@
                         <img src="Project_Images/Pingky.png" alt="not found">
                         <h3>Pingky</h3>
                         <p>Cute Bedsheet</p>
-                        <p class="prPrice">Rp 2.500.000 <del>Rp 14.500.00</del></p>
+                        <p class="prPrice">Rp 2.500.000</p>
+                        <del>Rp 14.500.00</del>
                     </div>
                     <div class="cardContent">
                         <button>Add To Cart</button>
@@ -245,7 +257,8 @@
                         <img src="Project_Images/Puty.png" alt="not found">
                         <h3>Potty</h3>
                         <p>Stylish Sofa</p>
-                        <p class="prPrice">Rp 2.500.000 <del>Rp 3.500.00</del></p>
+                        <p class="prPrice">Rp 2.500.000</p>
+                        <del>Rp 3.500.00</del>
                     </div>
                     <div class="cardContent">
                         <button>Add To Cart</button>
@@ -270,7 +283,7 @@
                 <button class="showBtn">Show More</button>
             </div>
         </div>
-        <div class="rooms">
+        <div class="rooms" id="about">
             <div class="content">
                 <h1>50+ Beautiful rooms inspiration</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit..</p>
@@ -287,7 +300,18 @@
                         <img src="Project_Images/rightArrow.png" alt="">
                     </div>
                 </div>
-                <img src="Project_Images/room2.png" alt="not found">
+                <div class="imgDes">
+                    <img src="Project_Images/room2.png" alt="not found">
+                    <div class="radioBtn">
+                        <input type="radio">
+                        <input type="radio">
+                        <input type="radio">
+                        <input type="radio">
+                    </div>
+                    <div class="swipeRight">
+                        <img src="Project_Images/swipe-right.png" alt="not found">
+                    </div>
+                </div>
                 <img src="Project_Images/room3.png" alt="not found">
             </div>
         </div>
@@ -322,7 +346,7 @@
                 </div>
             </div>
         </div>
-        <footer>
+        <footer id="contact">
             <hr>
             <div class="footerContent">
                 <div class="address">
@@ -365,7 +389,6 @@
                 <p>2023 furino. All rights reverved</p>
             </div>
         </footer>
-    </div>
     </div>
 </body>
 
