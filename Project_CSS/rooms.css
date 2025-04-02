@@ -1,0 +1,113 @@
+/* ROOMS */
+.rooms{
+    margin-top: 2em;
+    min-height: 650px;
+    background-color: #FCF8F3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 1em;
+    overflow-x: auto;
+}
+.rooms .content{
+    width: 35%;
+    margin-left: 3em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.rooms .content h1{
+    font-size: 2.25em;
+}
+.rooms .content p{
+    padding: 0;
+    color: grey;
+}
+.rooms .content button{
+    margin-top: 1.5em;
+    height: 3em;
+    width: 12em;
+    border: none;
+    background-color: #B88E2F;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+.rooms .roomImg{
+    width: 70%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    overflow-x: auto;
+}
+.rooms .roomImg .imgDes{
+    position: relative;
+}
+.rooms .roomImg .imgDes .imgtxt{
+    height: 100px;
+    width: 203px;
+    position: absolute;
+    z-index: 1;
+    top: 72%;
+    left: 10%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,255,255,0.5);
+    backdrop-filter: blur(4px);
+}
+.rooms .roomImg .imgDes .txtIcon{
+    height: 40px;
+    width: 40px;
+    background-color: #B88E2F;
+    position: absolute;
+    z-index: 1;
+    top: 82.1%;
+    left: 60.2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rooms .roomImg .imgDes .imgtxt p:nth-child(2){
+    font-size: 25px;
+    font-weight: 500;
+}
+.rooms .roomImg .imgDes .imgtxt p{
+    padding: 0;
+}
+.rooms .roomImg .imgDes .radioBtn{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1em;
+    position: relative;
+    left: 20px;
+    max-width: max-content;
+    accent-color: #B88E2F;
+}
+.rooms .roomImg .imgDes .swipeRight{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 55%;
+    right: -1%;
+    box-shadow:  3px 3px 8px rgba(0, 0, 0, 0.5);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(14px);
+    z-index: 15;
+
+}
+.rooms .roomImg img{
+    transform: scale(0.9);
+}
+.rooms .roomImg::-webkit-scrollbar{
+    display: none;
+}

@@ -1,0 +1,57 @@
+/* NAVBAR */
+.navbar{
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: var(--nav-bg-color);
+    z-index: 100;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+    transition: all 200ms;
+}
+.navbar .brandName{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 180px;
+}
+.navbar .brandName h1{
+    color: var(--nav-color);
+}
+.navbar .navigation{
+    width: 50%;
+}
+.navbar .navigation ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+}
+.navbar .navigation ul li a{
+    text-decoration :none;
+    color: var(--nav-color);
+    font-family: "Poppins",sans-serif;
+}
+.navbar .navigation ul li a{
+    transition: 1s;
+}
+.navbar .navigation ul li:hover a{
+    border-bottom: 5px solid black;
+}
+.navbar .icons{
+    width: 20%;
+}
+.navbar .icons ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.navbar .icons ul li{
+    list-style: none;
+}
+.navbar .icons ul li i{
+    font-size: 30px;
+    color: var(--nav-color);
+}

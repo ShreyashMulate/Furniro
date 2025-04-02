@@ -1,0 +1,248 @@
+/* MEDIA QUERIES */
+@media screen and (max-width: 1200px){
+    footer .contentList .newsLetter{
+        flex-direction: column;
+        align-items: start;
+        row-gap: 1em;
+    }
+}
+
+@media screen and (max-width: 991px){
+    .categories .categoryBox .box{
+        min-width: 15%;
+    }
+    footer .address{
+        width: 20%;
+    }
+    .categories .categoryBox .box p{
+        font-size: 1.8em;
+        padding-top: 1em;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .navbar .navigation{
+        width: 50%;
+    }
+    .navbar .icons {
+        display: none;
+    }
+    .about .aboutContent {
+        height: 50%;
+        left: 40%;
+        width: 55%;
+    }
+    .about .aboutContent h1{
+        font-size: 2em;
+    }
+    .about .aboutContent p{
+        font-size: 0.85em;
+    }
+    .about .aboutContent .buy{
+        margin-top: 1em;
+        font-size: 0.8em;
+    }
+    footer .footerContent .contentList .newsLetter input{
+        margin-right: 0;
+        width: 10em;
+    }
+    footer .footerContent .contentList .newsLetter input::placeholder{
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .hamburger-menu{
+        display: flex;
+    }
+    .navbar .navigation ul{
+        display: none;
+        margin-top: 10em;
+        flex-direction: column;
+        align-items: end;
+    }
+    .hamburger-menu:has(input:checked) + .grid .navbar{
+        height: 202px;
+    }
+    .hamburger-menu:has(input:checked) + .grid .navbar .navigation ul{
+        margin-top: 4em;
+        margin-right: 1em;
+        display: flex;
+    }
+    .hamburger-menu:has(input:checked) + .grid .navbar .navigation ul li{
+        text-align: left;
+    }
+    .navbar .sidebar{
+        display: block;
+    }
+    .navbar .brandName img{
+        margin-left: 1em;
+        width: 80%;
+    }
+    .about .aboutContent{
+        height: 60%;
+        left: 17%;
+        width: 68%;
+    }
+    .categories .categoryBox {
+        margin-top: 0.8em;
+    }
+    .categories .categoryBox .box{
+        margin-right: 0;
+    }
+    .products .cards{
+        width: 100%;
+    }
+    .products .cards .card{
+        width: 70%;
+    }
+    .products .cards .card .description img{
+        width: 100%;
+    }
+    .products .cards .card .description h3 + p{
+        padding-bottom: 12px;
+    }
+    .products .cards .card .description p{
+        font-size: 1.2em;
+    }
+    .products .cards .card .description .prPrice{
+        font-size: 1.15em;
+    }
+    .products .cards .card .description h3{
+        font-size: 1.8em;
+    }
+    .products .cards .card .cardContent{
+        bottom: -400px;
+    }
+    .products .cards .card .cardContent .actions {
+        width: 100%;
+    }
+    .products .cards .card .cardContent .actionContent{
+        width: 45%;
+    }
+    .products .card .card .cardContent .actionContent:nth-child(2){
+        position: relative;
+        right: 21px;
+    }
+    .products .card .card .cardContent .actionContent:nth-child(3){
+        position: relative;
+        right: 15px;
+    }
+    .products .cards .card .cardContent img{
+        width: 18%;
+        padding: 2px;
+    }
+    .products .cards .card .actions p{
+        width: 15%;
+    }
+    .rooms{
+        flex-direction: column;
+        width: 100%;
+    }
+    .rooms .content{
+        width: 100%;
+        margin-left: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    .rooms .content h1{
+        font-size: 2em;
+    }
+    .bentoMain .bentoGrid{
+        width: 200%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    footer .footerContent{
+        flex-direction: column;
+    }
+    footer .footerContent .address{
+        justify-content: center;
+        width: 100%;
+    }
+    footer .footerContent .address{
+        align-items: center;
+    }
+    footer .footerContent .address h3{ 
+        margin-bottom: 10px;
+    }
+    footer .footerContent .contentList{
+        width: 90%;
+        column-gap: 3em;
+        row-gap: 0;
+    }
+    footer .footerContent .contentList .col{
+        margin-top: 2em;
+        align-items: center;
+        width: 33%;
+        text-align: center;
+    }
+    footer .footerContent .contentList .col .heading{
+        font-size: 1.5em;
+        white-space: nowrap;
+    }
+    footer .footerContent .contentList .newsLetter input{
+        width: 15em;
+    }
+    footer .footerContent .contentList .newsLetter input::placeholder{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 425px){
+    .categories .categoryBox{
+        gap: 1em;
+    }
+    .categories .categoryBox .box{
+        width: 75%;
+    }
+}
+@media screen and (max-width: 375px){
+    .about .aboutContent{
+        height: 55%;
+        left: 7%;
+        width: 86%;
+    }
+    .categories .heading p{
+        text-align: center;
+    }
+    .products .cards .card .cardContent .actions{
+        width: 100%;
+        position: relative;
+        left: -10px;
+    }
+    .products .cards .card .cardContent .actions .actionContent:nth-child(2){
+        position: relative;
+        left: -13px;
+    }
+    .products .cards .card .cardContent .actions p{
+        font-size: 15px;
+    }
+    .products .cards .card .description .prPrice{
+        width: 100%;
+        display: block;
+    }
+    .products .cards .card .description del{
+        padding-left: 1em;
+        font-weight: 600;
+    }
+    .rooms .content{
+        margin-top: 2em;
+    }
+    .rooms .content > *{
+        text-align: center;
+    }
+    .rooms .content h1{
+        font-size: 25px;
+    }
+    .bentoMain .bentoGrid{
+        width: 300%;
+    }
+}
+@media screen and (max-width: 320px){
+    .products .cards .card .description h3{
+        font-size: 1.7em;
+    }
+    .products .cards .card .description p{
+        font-size: 1em;
+    }
+}

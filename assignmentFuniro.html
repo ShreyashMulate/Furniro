@@ -6,16 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Furniro</title>
     <link rel="stylesheet" href="Project_CSS/funiro.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css">
 </head>
 
 <body>
-    <label class="hamburger-menu">
-        <input type="checkbox">
+    <input id="toggle" type="checkbox">
+    <label class="hamburger-menu" for="hamburger">
+        <input type="checkbox" id="hamburger">
     </label>
-    <!-- <label class="toggle">
-        <input type="checkbox">
-        <span class="slider"></span>
-    </label> -->
     <div class="grid">
         <div class="navbar">
             <div class="brandName">
@@ -28,14 +26,19 @@
                     <li><a href="#shop">Shop</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li>
+                        <label for="toggle" class="checkboxToggle">
+
+                        </label>
+                    </li>
                 </ul>
             </div>
             <div class="icons">
                 <ul>
-                    <li><img src="Project_Images/mdi_account-alert-outline.png" alt="not found"></li>
-                    <li><img src="Project_Images/akar-icons_search.png" alt="not found"></li>
-                    <li><img src="Project_Images/akar-icons_heart.png" alt="not found"></li>
-                    <li><img src="Project_Images/ant-design_shopping-cart-outlined.png" alt="not found"></li>
+                    <li><i class="mdi mdi-account-alert-outline"></i></li>
+                    <li><i class="mdi mdi-magnify"></i></li>
+                    <li><i class="mdi mdi-heart-outline"></i></li>
+                    <li><i class="mdi mdi-cart-outline"></i></li>
                 </ul>
             </div>
         </div>
@@ -85,15 +88,15 @@
                         <button>Add To Cart</button>
                         <div class="actions">
                             <div class="actionContent">
-                                <img src="Project_Images/Share.png" alt="not found">
+                                <i class="mdi mdi-share-variant"></i>
                                 <p>Share</p>
                             </div>
                             <div class="actionContent">
-                                <img src="Project_Images/Compare.png" alt="not found">
+                                <i class="mdi mdi-compare-horizontal"></i>
                                 <p>Compare</p>
                             </div>
                             <div class="actionContent">
-                                <img src="Project_Images/Like.png" alt="not found">
+                                <i class="mdi mdi-heart-outline"></i>
                                 <p>Like</p>
                             </div>
                         </div>
@@ -110,15 +113,15 @@
                         <button>Add To Cart</button>
                         <div class="actions">
                             <div class="actionContent">
-                                <img src="Project_Images/Share.png" alt="not found">
+                                <i class="mdi mdi-share-variant"></i>
                                 <p>Share</p>
                             </div>
                             <div class="actionContent">
-                                <img src="Project_Images/Compare.png" alt="not found">
+                                <i class="mdi mdi-compare-horizontal"></i>
                                 <p>Compare</p>
                             </div>
                             <div class="actionContent">
-                                <img src="Project_Images/Like.png" alt="not found">
+                                <i class="mdi mdi-heart-outline"></i>
                                 <p>Like</p>
                             </div>
                         </div>
@@ -136,15 +139,15 @@
                         <button>Add To Cart</button>
                         <div class="actions">
                             <div class="actionContent">
-                                <img src="Project_Images/Share.png" alt="not found">
+                                <i class="mdi mdi-share-variant"></i>
                                 <p>Share</p>
                             </div>
                             <div class="actionContent">
-                                <img src="Project_Images/Compare.png" alt="not found">
+                                <i class="mdi mdi-compare-horizontal"></i>
                                 <p>Compare</p>
                             </div>
                             <div class="actionContent">
-                                <img src="Project_Images/Like.png" alt="not found">
+                                <i class="mdi mdi-heart-outline"></i>
                                 <p>Like</p>
                             </div>
                         </div>
@@ -162,15 +165,15 @@
                         <button>Add To Cart</button>
                         <div class="actions">
                             <div class="actionContent">
-                                <img src="Project_Images/Share.png" alt="not found">
+                                <i class="mdi mdi-share-variant"></i>
                                 <p>Share</p>
                             </div>
                             <div class="actionContent">
-                                <img src="Project_Images/Compare.png" alt="not found">
+                                <i class="mdi mdi-compare-horizontal"></i>
                                 <p>Compare</p>
                             </div>
                             <div class="actionContent">
-                                <img src="Project_Images/Like.png" alt="not found">
+                                <i class="mdi mdi-heart-outline"></i>
                                 <p>Like</p>
                             </div>
                         </div>
@@ -187,15 +190,15 @@
                         <button>Add To Cart</button>
                         <div class="actions">
                             <div class="actionContent">
-                                <img src="Project_Images/Share.png" alt="not found">
+                                <i class="mdi mdi-share-variant"></i>
                                 <p>Share</p>
                             </div>
                             <div class="actionContent">
-                                <img src="Project_Images/Compare.png" alt="not found">
+                                <i class="mdi mdi-compare-horizontal"></i>
                                 <p>Compare</p>
                             </div>
                             <div class="actionContent">
-                                <img src="Project_Images/Like.png" alt="not found">
+                                <i class="mdi mdi-heart-outline"></i>
                                 <p>Like</p>
                             </div>
                         </div>
@@ -212,15 +215,15 @@
                         <button>Add To Cart</button>
                         <div class="actions">
                             <div class="actionContent">
-                                <img src="Project_Images/Share.png" alt="not found">
+                                <i class="mdi mdi-share-variant"></i>
                                 <p>Share</p>
                             </div>
                             <div class="actionContent">
-                                <img src="Project_Images/Compare.png" alt="not found">
+                                <i class="mdi mdi-compare-horizontal"></i>
                                 <p>Compare</p>
                             </div>
                             <div class="actionContent">
-                                <img src="Project_Images/Like.png" alt="not found">
+                                <i class="mdi mdi-heart-outline"></i>
                                 <p>Like</p>
                             </div>
                         </div>
@@ -238,15 +241,15 @@
                         <button>Add To Cart</button>
                         <div class="actions">
                             <div class="actionContent">
-                                <img src="Project_Images/Share.png" alt="not found">
+                                <i class="mdi mdi-share-variant"></i>
                                 <p>Share</p>
                             </div>
                             <div class="actionContent">
-                                <img src="Project_Images/Compare.png" alt="not found">
+                                <i class="mdi mdi-compare-horizontal"></i>
                                 <p>Compare</p>
                             </div>
                             <div class="actionContent">
-                                <img src="Project_Images/Like.png" alt="not found">
+                                <i class="mdi mdi-heart-outline"></i>
                                 <p>Like</p>
                             </div>
                         </div>
@@ -264,15 +267,15 @@
                         <button>Add To Cart</button>
                         <div class="actions">
                             <div class="actionContent">
-                                <img src="Project_Images/Share.png" alt="not found">
+                                <i class="mdi mdi-share-variant"></i>
                                 <p>Share</p>
                             </div>
                             <div class="actionContent">
-                                <img src="Project_Images/Compare.png" alt="not found">
+                                <i class="mdi mdi-compare-horizontal"></i>
                                 <p>Compare</p>
                             </div>
                             <div class="actionContent">
-                                <img src="Project_Images/Like.png" alt="not found">
+                                <i class="mdi mdi-heart-outline"></i>
                                 <p>Like</p>
                             </div>
                         </div>

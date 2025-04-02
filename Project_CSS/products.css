@@ -1,0 +1,181 @@
+/* PRODUCTS */
+.products{
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.products .heading{
+    text-align: center;
+    margin-top: 4em;
+}
+.products .heading h2{
+    font-size: 2em;
+    color: var(--nav-color);
+}
+.products .cards{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 3%;
+    min-height: 400px;
+    row-gap: 2.5em;
+    column-gap: 0.8em;
+    width: 90%;
+}
+.products .cards .card{
+    background-color: #F4F5F7;
+    border-radius: 10px;
+    transition: 0.8s;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 4px 4px 6px 3px rgba(0, 0, 0, 0.3);
+    transition-delay: 2s;
+    max-height: max-content;
+}
+.products .cards .card:nth-child(1)::before,
+.products .cards .card:nth-child(3)::before,
+.products .cards .card:nth-child(7)::before{
+    content: "-30%";
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 14px;
+    color: white;
+    background-color: #E97171;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    top: 12px;
+    right: 12px;
+}
+.products .cards .card:nth-child(4)::before,
+.products .cards .card:nth-child(6)::before,
+.products .cards .card:nth-child(8)::before{
+    content: "New";
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 14px;
+    color: white;
+    background-color: #2EC1AC;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    top: 12px;
+    right: 12px;
+}
+.products .cards .card:hover .cardContent{
+    background-color:rgba(0, 0, 0, 0.3);
+    box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+}
+.products .cards .card .cardContent{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    bottom: -250px;
+    transition: all 0.5s ease-in-out;
+    z-index: 10;
+}
+.products .cards .card .cardContent .actions{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1.5em;
+    width: 100%;
+}
+.products .cards .card .actionContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+    cursor: pointer;
+}
+.products .cards .card .actionContent i{
+    font-size: 20px;
+    color: white;
+}
+.products .cards .card .cardContent button{
+    width: 60%;
+    height: 9%;
+    margin-bottom: 2em;
+    border: none;
+    background-color: white;
+    color: #B88E2F;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.products .cards .cardContent button:hover{
+    background-color: #B88E2F;
+    color: white;
+}
+.products .cards .card .cardContent .actions p{
+    padding: 0;
+    color: white;
+    transition: 0.3s;
+}
+.products .cards .card .cardContent .actionContent:hover p{
+    color: #B88E2F;
+}
+.products .cards .card .cardContent .actionContent:hover img{
+    transform: scale(1.2);
+}
+.products .cards .card img{
+    height: 100%;
+    width: auto;
+    border-radius: 5px;
+}
+.products .cards .card .description h3,
+.products .cards .card .description p{
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+.products .cards .card .description p{
+    font-size: 0.9em;
+    color: grey;
+}
+del{
+    display: inline;
+    color: grey;
+    padding-left: 3em;
+    font-size: 0.9rem;
+}
+.products .cards .card .description .prPrice{
+    display: inline;
+    font-size: 1em;
+    font-weight: 600;
+    color: black;
+}
+.products .showBtn{
+    width: 15em;
+    margin-top: 3em;
+    padding: 1em;
+    border: 2px solid #B88E2F;
+    background-color: white;
+    font-size: 1em;
+    font-weight: bold;
+    color: #B88E2F;
+    transition: 1s;
+    cursor: pointer;
+}
+.products .showBtn:hover{
+    background-color: #B88E2F;
+    border: none;
+    color: white;
+}
